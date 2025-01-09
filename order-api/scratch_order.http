@@ -1,0 +1,32 @@
+### 상품 추가
+POST http://localhost:8082/seller/product
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQT3IxUmJrVFo3b2p3dy9xa3FMT2VmSXBya0xhY1p3ZXNpZURZT05ackxzPSIsImp0aSI6IkEzS3hjaEc5SFF1aWFrSDBxZVd2SUE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzM2NDMzNzE5LCJleHAiOjE3MzY1MjAxMTl9.W9yRygqf25NDOx-k3CL07pXM6nf17tCosP7_U_0P7qI
+
+{
+  "name": "나이키 에어포스",
+  "description": "신발",
+  "items": [
+    {
+      "name": "270",
+      "price": 100000,
+      "count": 3
+    }
+  ]
+}
+
+### 상품 추가
+POST http://localhost:8082/seller/product/item
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQT3IxUmJrVFo3b2p3dy9xa3FMT2VmSXBya0xhY1p3ZXNpZURZT05ackxzPSIsImp0aSI6IkEzS3hjaEc5SFF1aWFrSDBxZVd2SUE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzM2NDMzNzE5LCJleHAiOjE3MzY1MjAxMTl9.W9yRygqf25NDOx-k3CL07pXM6nf17tCosP7_U_0P7qI
+
+{
+  "productId": 1,
+  "name": "280",
+  "price": 100000,
+  "count": 3
+}
+
+
+### 이메일 인증
+GET http://localhost:8081/signup/customer/verify?email=jjae.3.lee@gmail.com&code=F7APrZ02Q2
