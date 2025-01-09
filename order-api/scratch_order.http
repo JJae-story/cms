@@ -1,7 +1,7 @@
 ### 상품 추가
 POST http://localhost:8082/seller/product
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQT3IxUmJrVFo3b2p3dy9xa3FMT2VmSXBya0xhY1p3ZXNpZURZT05ackxzPSIsImp0aSI6IkEzS3hjaEc5SFF1aWFrSDBxZVd2SUE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzM2NDMzNzE5LCJleHAiOjE3MzY1MjAxMTl9.W9yRygqf25NDOx-k3CL07pXM6nf17tCosP7_U_0P7qI
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQT3IxUmJrVFo3b2p3dy9xa3FMT2VmSXBya0xhY1p3ZXNpZURZT05ackxzPSIsImp0aSI6IkEzS3hjaEc5SFF1aWFrSDBxZVd2SUE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzM2NDQwNDI3LCJleHAiOjE3MzY1MjY4Mjd9.eRgdaA-z1VmXaaQRp8sxztvfjWNMyE4Us55zj94KSpQ
 
 {
   "name": "나이키 에어포스",
@@ -10,23 +10,50 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQT3IxUmJrVFo3b2p3dy9xa3FMT2VmSXBya
     {
       "name": "270",
       "price": 100000,
-      "count": 3
+      "count": 2
     }
   ]
 }
 
-### 상품 추가
+### 상품 아이템 추가
 POST http://localhost:8082/seller/product/item
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQT3IxUmJrVFo3b2p3dy9xa3FMT2VmSXBya0xhY1p3ZXNpZURZT05ackxzPSIsImp0aSI6IkEzS3hjaEc5SFF1aWFrSDBxZVd2SUE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzM2NDMzNzE5LCJleHAiOjE3MzY1MjAxMTl9.W9yRygqf25NDOx-k3CL07pXM6nf17tCosP7_U_0P7qI
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQT3IxUmJrVFo3b2p3dy9xa3FMT2VmSXBya0xhY1p3ZXNpZURZT05ackxzPSIsImp0aSI6IkEzS3hjaEc5SFF1aWFrSDBxZVd2SUE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzM2NDQwNDI3LCJleHAiOjE3MzY1MjY4Mjd9.eRgdaA-z1VmXaaQRp8sxztvfjWNMyE4Us55zj94KSpQ
 
 {
   "productId": 1,
   "name": "280",
   "price": 100000,
-  "count": 3
+  "count": 2
 }
 
+### 상품 수정
+PUT http://localhost:8082/seller/product
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQT3IxUmJrVFo3b2p3dy9xa3FMT2VmSXBya0xhY1p3ZXNpZURZT05ackxzPSIsImp0aSI6IkEzS3hjaEc5SFF1aWFrSDBxZVd2SUE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzM2NDQwNDI3LCJleHAiOjE3MzY1MjY4Mjd9.eRgdaA-z1VmXaaQRp8sxztvfjWNMyE4Us55zj94KSpQ
 
-### 이메일 인증
-GET http://localhost:8081/signup/customer/verify?email=jjae.3.lee@gmail.com&code=F7APrZ02Q2
+{
+  "id": 1,
+  "name": "나이키 에어포스 한정판",
+  "description": "신발",
+  "items": [
+    {
+      "id": 2,
+      "name": "275",
+      "price": 150000,
+      "count": 2
+    }
+  ]
+}
+
+### 상품 아이템 수정
+PUT http://localhost:8082/seller/product/item
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQT3IxUmJrVFo3b2p3dy9xa3FMT2VmSXBya0xhY1p3ZXNpZURZT05ackxzPSIsImp0aSI6IkEzS3hjaEc5SFF1aWFrSDBxZVd2SUE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzM2NDQwNDI3LCJleHAiOjE3MzY1MjY4Mjd9.eRgdaA-z1VmXaaQRp8sxztvfjWNMyE4Us55zj94KSpQ
+
+{
+  "id": 2,
+  "name": "265",
+  "price": 100000,
+  "count": 1
+}

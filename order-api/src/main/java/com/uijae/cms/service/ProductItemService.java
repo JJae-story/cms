@@ -3,6 +3,7 @@ package com.uijae.cms.service;
 import com.uijae.cms.domain.model.Product;
 import com.uijae.cms.domain.model.ProductItem;
 import com.uijae.cms.domain.product.AddProductItemForm;
+import com.uijae.cms.domain.product.UpdateProductItemForm;
 import com.uijae.cms.domain.repository.ProductItemRepository;
 import com.uijae.cms.domain.repository.ProductRepository;
 import com.uijae.cms.exception.CustomException;
@@ -11,8 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import static com.uijae.cms.exception.ErrorCode.NOT_FOUND_PRODUCT;
-import static com.uijae.cms.exception.ErrorCode.SAME_ITEM_NAME;
+import static com.uijae.cms.exception.ErrorCode.*;
 
 @Service
 @RequiredArgsConstructor
@@ -34,5 +34,18 @@ public class ProductItemService {
         product.getProductItems().add(productItem);
 
         return product;
+    }
+
+    @Transactional
+    public ProductItem updateProductItem(Long sellerId, UpdateProductItemForm form) {
+        ProductItem productItem = productItemRepository.findById(form.getId())
+                .filter(pi -> pi.getSellerId().equals(sellerId))
+                .orElseThrow(() -> new CustomException(NOT_FOUND_ITEM));
+
+        productItem.setName(form.getName());
+        productItem.setCount(form.getCount());
+        productItem.setPrice(form.getPrice());
+
+        return productItem;
     }
 }

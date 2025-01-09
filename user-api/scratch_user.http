@@ -53,7 +53,7 @@ Content-Type: application/json
 }
 
 ### 이메일 인증
-GET http://localhost:8081/signup/seller/verify?email=jjae.3.lee@gmail.com&code=TiyKBbsBrL
+GET http://localhost:8081/signup/seller/verify?email=jjae.3.lee@gmail.com&code=OjtfDxNExp
 
 ### 로그인
 POST http://localhost:8081/signin/seller
