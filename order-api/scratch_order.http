@@ -52,8 +52,32 @@ Content-Type: application/json
 X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQT3IxUmJrVFo3b2p3dy9xa3FMT2VmSXBya0xhY1p3ZXNpZURZT05ackxzPSIsImp0aSI6IkEzS3hjaEc5SFF1aWFrSDBxZVd2SUE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzM2NDQwNDI3LCJleHAiOjE3MzY1MjY4Mjd9.eRgdaA-z1VmXaaQRp8sxztvfjWNMyE4Us55zj94KSpQ
 
 {
-  "id": 2,
+  "id": 1,
   "name": "265",
   "price": 100000,
   "count": 1
 }
+
+### 상품 삭제
+DELETE http://localhost:8082/seller/product?id=1
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQT3IxUmJrVFo3b2p3dy9xa3FMT2VmSXBya0xhY1p3ZXNpZURZT05ackxzPSIsImp0aSI6IkEzS3hjaEc5SFF1aWFrSDBxZVd2SUE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzM2NDQwNDI3LCJleHAiOjE3MzY1MjY4Mjd9.eRgdaA-z1VmXaaQRp8sxztvfjWNMyE4Us55zj94KSpQ
+
+{
+  "id": 1,
+  "name": "나이키 에어포스 한정판",
+  "description": "신발",
+  "items": [
+    {
+      "id": 1,
+      "name": "265",
+      "price": 150000,
+      "count": 1
+    }
+  ]
+}
+
+### 상품 아이템 삭제
+DELETE http://localhost:8082/seller/product/item?id=2
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQT3IxUmJrVFo3b2p3dy9xa3FMT2VmSXBya0xhY1p3ZXNpZURZT05ackxzPSIsImp0aSI6IkEzS3hjaEc5SFF1aWFrSDBxZVd2SUE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzM2NDQwNDI3LCJleHAiOjE3MzY1MjY4Mjd9.eRgdaA-z1VmXaaQRp8sxztvfjWNMyE4Us55zj94KSpQ
