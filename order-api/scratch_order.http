@@ -4,7 +4,7 @@ Content-Type: application/json
 X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQT3IxUmJrVFo3b2p3dy9xa3FMT2VmSXBya0xhY1p3ZXNpZURZT05ackxzPSIsImp0aSI6IkEzS3hjaEc5SFF1aWFrSDBxZVd2SUE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzM2NDQwNDI3LCJleHAiOjE3MzY1MjY4Mjd9.eRgdaA-z1VmXaaQRp8sxztvfjWNMyE4Us55zj94KSpQ
 
 {
-  "name": "나이키 에어포스 한정판",
+  "name": "나이키 에어포스",
   "description": "신발",
   "items": [
     {
@@ -88,3 +88,23 @@ Content-Type: application/json
 ### 상품 상세 검색
 GET http://localhost:8082/search/product/detail?productId=1
 Content-Type: application/json
+
+### 장바구니 추가
+POST http://localhost:8082/customer/cart
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQT3IxUmJrVFo3b2p3dy9xa3FMT2VmSXBya0xhY1p3ZXNpZURZT05ackxzPSIsImp0aSI6IkEzS3hjaEc5SFF1aWFrSDBxZVd2SUE9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzM2NDQwNDI3LCJleHAiOjE3MzY1MjY4Mjd9.eRgdaA-z1VmXaaQRp8sxztvfjWNMyE4Us55zj94KSpQ
+
+{
+  "id": 1,
+  "sellerId": 1,
+  "name": "나이키 에어포스",
+  "description": "신발",
+  "items": [
+    {
+      "id": 1,
+      "name": "270",
+      "count": 1,
+      "price": 100000
+    }
+  ]
+}
