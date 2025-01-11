@@ -12,7 +12,7 @@ Content-Type: application/json
 }
 
 ### 이메일 인증
-GET http://localhost:8081/signup/customer/verify?email=jjae.3.lee@gmail.com&code=F7APrZ02Q2
+GET http://localhost:8081/signup/customer/verify?email=jjae.3.lee@gmail.com&code=sQNs2jBGLZ
 
 ### 로그인
 POST http://localhost:8081/signin/customer
@@ -20,23 +20,23 @@ Content-Type: application/json
 
 {
   "email": "jjae.3.lee@gmail.com",
-  "password": "string"
+  "password": "pw"
 }
 
 ### 회원 정보 조회
 GET http://localhost:8081/customer/getInfo
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJCNEtVWnYvQ291akpmQVIyZEJ4eXV0SVcrSzAyL01PNVBBNC9iOUlYZ3VzPSIsImp0aSI6Im4vUC9jVk83cEFLdjZEMGVuN2dySWc9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3MzY0MjEzMDAsImV4cCI6MTczNjUwNzcwMH0.UwjzYM_Ghp2E6yCmHNGMgdv_ItUJFJ3C-CB0-3UXG5o
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQT3IxUmJrVFo3b2p3dy9xa3FMT2VmSXBya0xhY1p3ZXNpZURZT05ackxzPSIsImp0aSI6IkEzS3hjaEc5SFF1aWFrSDBxZVd2SUE9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3MzY1ODE1MDUsImV4cCI6MTczNjY2NzkwNX0.iY69Gffj_IqXBdfViqyOTBkrMijS3OnflMXFjSkPlTI
 
 ### 잔액 변경
 POST http://localhost:8081/customer/balance
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJCNEtVWnYvQ291akpmQVIyZEJ4eXV0SVcrSzAyL01PNVBBNC9iOUlYZ3VzPSIsImp0aSI6Im4vUC9jVk83cEFLdjZEMGVuN2dySWc9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3MzY0MjEzMDAsImV4cCI6MTczNjUwNzcwMH0.UwjzYM_Ghp2E6yCmHNGMgdv_ItUJFJ3C-CB0-3UXG5o
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQT3IxUmJrVFo3b2p3dy9xa3FMT2VmSXBya0xhY1p3ZXNpZURZT05ackxzPSIsImp0aSI6IkEzS3hjaEc5SFF1aWFrSDBxZVd2SUE9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3MzY1ODE1MDUsImV4cCI6MTczNjY2NzkwNX0.iY69Gffj_IqXBdfViqyOTBkrMijS3OnflMXFjSkPlTI
 
 {
   "from": "admin",
-  "message": "test",
-  "money": 50000
+  "message": "돈 충전",
+  "money": 150000
 }
 
 ### ---------------- 셀러 ------------------
