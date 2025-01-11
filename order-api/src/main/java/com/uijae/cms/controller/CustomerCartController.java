@@ -1,6 +1,8 @@
 package com.uijae.cms.controller;
 
+import com.uijae.cms.OrderApplication;
 import com.uijae.cms.application.CartApplication;
+import com.uijae.cms.application.OrderServiceApplication;
 import com.uijae.cms.domain.config.JwtAuthenticationProvider;
 import com.uijae.cms.domain.product.AddProductCartForm;
 import com.uijae.cms.domain.redis.Cart;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class CustomerCartController {
     private final CartApplication cartApplication;
+    private final OrderServiceApplication orderServiceApplication;
     private final JwtAuthenticationProvider provider;
 
     @PostMapping
@@ -37,5 +40,15 @@ public class CustomerCartController {
             @RequestBody Cart cart) {
 
         return ResponseEntity.ok(cartApplication.updateCart(provider.getUserVo(token).getId(), cart));
+    }
+
+    @PostMapping("/order")
+    public ResponseEntity<Cart> orderCart(
+            @RequestHeader(name = "X-AUTH-TOKEN") String token,
+            @RequestBody Cart cart) {
+
+        orderServiceApplication.order(token, cart);
+
+        return ResponseEntity.ok().build();
     }
 }
